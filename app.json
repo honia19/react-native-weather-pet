@@ -18,7 +18,7 @@
       "backgroundColor": "#222422"
     },
     "updates": {
-      "fallbackToCacheTimeout": 2
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -28,7 +28,7 @@
     },
     "android": {
       "package": "com.vladyslav.honchenko.weather.app",
-      "versionCode": 2,
+      "versionCode": 1,
       "permissions": [      
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION"

@@ -20,7 +20,7 @@ const CityForm = ({ handleSetNewCity }: Function) => {
     },
     validationSchema: object({
       city: string()
-        .min(5, 'Must be 5 characters or more')
+        .min(4, 'Must be 4 characters or more')
         .required('Required')
     }),
     onSubmit: (values) => {

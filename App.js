@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Provider } from 'mobx-react';
 import { MenuProvider } from 'react-native-popup-menu';
+import 'react-native-gesture-handler';
 
 import { AppLoading } from 'expo';
 import { cacheFonts } from './src/bootstrup';

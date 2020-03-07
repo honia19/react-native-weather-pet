@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { openBrowserAsync } from 'expo-web-browser';
+import 'react-native-gesture-handler';
 
 import AppHeaderButton from '../../shared/AppHeaderButton';
 

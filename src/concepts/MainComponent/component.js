@@ -3,6 +3,7 @@ import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import styled from 'styled-components/native';
+import 'react-native-gesture-handler';
 
 import AppHeaderButton from '../../shared/AppHeaderButton';
 

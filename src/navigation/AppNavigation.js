@@ -6,6 +6,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createDrawerNavigator } from 'react-navigation-drawer';
+import 'react-native-gesture-handler';
 
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -105,7 +106,8 @@ const WebWeatherNavigation = createStackNavigator(
 
 const WeeklyWeatherNavigation = createStackNavigator(
   {
-    WebWeather: WeatherForWeekScreen
+    WeatherWeek: WeatherForWeekScreen,
+    WeatherCurrentDay: WeatherForCurrentDayScreen
   },
   config
 );

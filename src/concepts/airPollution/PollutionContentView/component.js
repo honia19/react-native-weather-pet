@@ -80,7 +80,7 @@ const PollutionContentView = inject(
 const WrapperBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
-  background-color: rgba(226, 222, 216, 0.7);
+  background-color: ${(props) => props.theme.backgroundColorLightness};
 `;
 
 const WrapperBlock = styled.View`
@@ -90,7 +90,6 @@ const WrapperBlock = styled.View`
 `;
 
 WrapperBlock.InfoBlock = styled.View`
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -99,21 +98,21 @@ WrapperBlock.InfoBlock.content = styled.Text`
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-bold';
 `;
 
 WrapperBlock.InfoBlock.buttonText = styled.Text`
   font-size: 24px;
   text-align: center;
-  color: white;
+  color: ${(props) => props.theme.textColorWhite};
   font-family: 'simonetta-bold';
 `;
 
 WrapperBlock.InfoBlock.cityButton = styled.TouchableHighlight`
   width: 158px;
   height: 39px;
-  background-color: rgba(220, 153, 23, 0.49);
+  background-color: ${(props) => props.theme.backgroundColorDarkness};
   margin-right: 20px;
   margin-top: 10px;
 `;
@@ -121,21 +120,21 @@ WrapperBlock.InfoBlock.cityButton = styled.TouchableHighlight`
 WrapperBlock.InfoBlock.time = styled.Text`
   font-size: 14px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-bold';
 `;
 
 WrapperBlock.InfoBlock.date = styled.Text`
   font-size: 20px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-bold';
 `;
 
 WrapperBlock.errorText = styled.Text`
   font-size: 25px;
   text-align: center;
-  color: red;
+  color: ${(props) => props.theme.textColorRed};
   font-family: 'simonetta-bold';
 `;
 

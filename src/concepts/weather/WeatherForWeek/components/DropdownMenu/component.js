@@ -1,4 +1,5 @@
 /* eslint-disable react/no-children-prop */
+// @flow
 import React from 'react';
 import {
   Menu,
@@ -9,8 +10,8 @@ import {
 import styled from 'styled-components/native';
 import { BackHandler, Alert } from 'react-native';
 
-export const DropdownMenu = ({ handleChangeModalVisible }) => {
-  const handleShowAlert = () => Alert.alert(
+export const DropdownMenu = ({ handleChangeModalVisible }: Function) => {
+  const handleShowAlert = (): void => Alert.alert(
     'Exit from WeatherApp',
     'Are you sure, that you want to exit from the app?',
     [
@@ -41,7 +42,7 @@ export const DropdownMenu = ({ handleChangeModalVisible }) => {
 const Wrapper = styled.View``;
 
 const TextWrapper = styled.Text`
-  color: red;
+  color: ${(props) => props.theme.textColorRed};
 `;
 
 const TextTrigger = styled(TextWrapper)`

@@ -42,7 +42,7 @@ CityWeatherWrapper.CityContainer.text = styled.Text`
   font-size: 36px;
   line-height: 42px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.57);
+  color: ${(props) => props.theme.textColorCountryText};
   font-family: 'simonetta-bold';
 `;
 

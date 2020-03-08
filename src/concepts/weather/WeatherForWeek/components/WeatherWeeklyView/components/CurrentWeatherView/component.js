@@ -30,7 +30,6 @@ const CurrentWeatherView = inject('weatherWeakStore')(observer(({ weatherWeakSto
 const TouchableNativeFeedbackContainer = styled.TouchableNativeFeedback``;
 
 const Temperature = styled.View`
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 `;
@@ -50,14 +49,14 @@ Temperature.Date = styled.Text`
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
 `;
 
 Temperature.BigTemperature = styled.Text`
   font-size: 64px;
   line-height: 75px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
 `;
 
 Temperature.FeelsLikeTemperature = styled(Temperature.Date)`

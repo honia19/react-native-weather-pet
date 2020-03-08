@@ -3,11 +3,12 @@
 import React, { useState } from 'react';
 import { Provider } from 'mobx-react';
 import { MenuProvider } from 'react-native-popup-menu';
+import { ThemeProvider } from 'styled-components/native';
 import 'react-native-gesture-handler';
-
 import { AppLoading } from 'expo';
-import { cacheFonts } from './src/bootstrup';
 
+import { cacheFonts } from './src/bootstrup';
+import { theme } from './src/theme';
 import { AppNavigation } from './src/navigation/AppNavigation';
 import locationStore from './src/concepts/MainComponent/store/locationStore';
 import cityModalStore from './src/concepts/CityChangeModal/store/cityModalStore';
@@ -35,11 +36,13 @@ const App = () => {
   }
 
   return (
-    <Provider {...stores}>
-      <MenuProvider>
-        <AppNavigation />
-      </MenuProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider {...stores}>
+        <MenuProvider>
+          <AppNavigation />
+        </MenuProvider>
+      </Provider>
+    </ThemeProvider>
   );
 };
 

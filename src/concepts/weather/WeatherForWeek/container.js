@@ -72,7 +72,7 @@ WeatherForWeek.navigationOptions = ({ navigation }) => {
 const WrapperBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
-  background-color: rgba(226, 222, 216, 0.7);
+  background-color:  ${(props) => props.theme.backgroundColorLightness};
 `;
 
 const ActivityIndicatorComponent = styled.ActivityIndicator``;
@@ -80,7 +80,7 @@ const ActivityIndicatorContainer = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #222422;
+  background-color: ${(props) => props.theme.backgroungColorInIndicator};
 `;
 
 export default WeatherForWeek;

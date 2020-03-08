@@ -5,7 +5,8 @@ import styled from 'styled-components/native';
 import { formatTemperature } from '../../../utils';
 
 type ConcrentDescription = {
-  main: Object, wind: Object
+  main: Object,
+  wind: Object
 };
 
 type DescriptionSectionProps = {
@@ -51,7 +52,6 @@ const DescriptionSection = ({ descriptionData: { main, wind } }: DescriptionSect
 
 const Description = styled.View`
   width: 100%;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 `;
@@ -69,7 +69,7 @@ Description.FistRow = styled.Text`
   line-height: 42px;
   font-family: 'simonetta-regular';
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
 `;
 Description.SecondRow = styled(Description.FistRow)``;
 

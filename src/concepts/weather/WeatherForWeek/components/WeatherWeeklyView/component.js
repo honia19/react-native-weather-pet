@@ -49,7 +49,6 @@ const WeatherWeeklyView = inject('weatherWeakStore')(observer(({ navigation, wea
 }));
 
 const WrapperContainer = styled.View`
-  flex-direction: column;
   justify-content: flex-start;
 `;
 

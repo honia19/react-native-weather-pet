@@ -71,12 +71,11 @@ const FlatListBlock = styled.FlatList``;
 const WrapperBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
-  background-color: rgba(226, 222, 216, 0.7);
+  background-color: ${(props) => props.theme.backgroundColorLightness};
 `;
 
 const ContentBlock = styled.View`
   flex: 1;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -100,11 +99,11 @@ const WrapperBottomButton = styled.View`
 WrapperBottomButton.Close = styled.TouchableHighlight`
   width: 158px;
   height: 39px;
-  background-color: black;
+  background-color: ${(props) => props.theme.backgroundColorBlack};
 `;
 
 WrapperBottomButton.ButtonText = styled.Text`
-  color: white;
+  color: ${(props) => props.theme.textColorWhite};
   font-size: 24px;
   text-align: center;
   font-family: 'simonetta-regular';

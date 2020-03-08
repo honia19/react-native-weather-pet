@@ -55,29 +55,8 @@ const CityForm = ({ handleSetNewCity }: Function) => {
 const Wrapper = styled.View`
   width: 100%;
   height: 100px;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-`;
-
-const TouchBlock = styled.TouchableWithoutFeedback``;
-
-Wrapper.ButtonOk = styled.TouchableHighlight`
-  width: 158px;
-  height: 39px;
-  background-color: #7d6c18;
-  margin-top: 30px;
-`;
-
-Wrapper.ButtonOk.ButtonText = styled.Text`
-  color: white;
-  font-size: 24px;
-  text-align: center;
-  font-family: 'simonetta-regular';
-`;
-
-Wrapper.ButtonOk.errorText = styled(Wrapper.ButtonOk.ButtonText)`
-  color: red;
 `;
 
 const InputBlock = styled.View`
@@ -86,10 +65,30 @@ const InputBlock = styled.View`
   align-items: center;
 `;
 
+const TouchBlock = styled.TouchableWithoutFeedback``;
+
+Wrapper.ButtonOk = styled.TouchableHighlight`
+  width: 158px;
+  height: 39px;
+  background-color:${(props) => props.theme.backgroundColorButtonOk};
+  margin-top: 30px;
+`;
+
+Wrapper.ButtonOk.ButtonText = styled.Text`
+  color: ${(props) => props.theme.textColorWhite};
+  font-size: 24px;
+  text-align: center;
+  font-family: 'simonetta-regular';
+`;
+
+Wrapper.ButtonOk.errorText = styled(Wrapper.ButtonOk.ButtonText)`
+  color: ${(props) => props.theme.textColorRed};
+`;
+
 InputBlock.CityInput = styled.TextInput`
   font-family: 'simonetta-bold';
   font-size: 18px;
-  border-bottom-color: black;
+  border-bottom-color: ${(props) => props.theme.textColorBlack};
   border-bottom-width: 1px;
   height: 40px;
   width: 100%;

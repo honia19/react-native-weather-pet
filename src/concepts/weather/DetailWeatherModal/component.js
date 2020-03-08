@@ -65,16 +65,15 @@ const DetailWeatherModal = inject('weatherWeakStore', 'locationStore')(observer(
 const WrapperBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: ${(props) => props.theme.backgroundColorWhite};
 `;
 
 const Wrapper = styled.View`
   height: 100%;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: ${(props) => props.theme.backgroungColorImage};
 `;
 
 const Temperature = styled.View`
@@ -87,7 +86,6 @@ const Temperature = styled.View`
 const Description = styled.View`
   width: 100%;
   height: 100%;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -102,7 +100,6 @@ const WrapperBottomButton = styled.View`
 Description.UnionBlock = styled.View`
   width: 100%;
   height: 100%;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 `;
@@ -123,7 +120,7 @@ Wrapper.TodayDate = styled.Text`
   line-height: 42px;
   font-family: 'simonetta-regular';
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
 `;
 
 Wrapper.ImageCity = styled.View`
@@ -134,7 +131,6 @@ Wrapper.ImageCity = styled.View`
 `;
 
 Temperature.TemperatureData = styled.View`
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 `;
@@ -157,11 +153,11 @@ Wrapper.WeatherDescription = styled(Wrapper.TodayDate)`
 WrapperBottomButton.Close = styled.TouchableHighlight`
   width: 158px;
   height: 39px;
-  background-color: black;
+  background-color: ${(props) => props.theme.backgroundColorBlack};
 `;
 
 WrapperBottomButton.ButtonText = styled.Text`
-  color: white;
+  color: ${(props) => props.theme.textColorWhite};
   font-size: 24px;
   text-align: center;
   font-family: 'simonetta-regular';

@@ -59,7 +59,7 @@ WeatherCurrentDay.navigationOptions = {
 const WrapperBackgroundImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
-  background-color: rgba(226, 222, 216, 0.7);
+  background-color: ${(props) => props.theme.backgroundColorLightness};
 `;
 
 const FlatListComponent = styled.FlatList``;
@@ -67,7 +67,6 @@ const FlatListComponent = styled.FlatList``;
 const Wrapper = styled.View`
   width: 100%;
   height: 100%;
-  flex-direction: column;
   justify-content: space-between;
 `;
 

@@ -33,7 +33,7 @@ const Wrapper = styled.View`
 `;
 
 const ItemButton = styled.TouchableOpacity`
-  background-color: rgba(220, 153, 23, 0.49);
+  background-color: ${(props) => props.theme.backgroundColorDarkness};
   width: 100%;
   padding: 20px;
   padding-top: 10px;
@@ -43,7 +43,7 @@ const ItemText = styled.Text`
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-bold';
 `;
 

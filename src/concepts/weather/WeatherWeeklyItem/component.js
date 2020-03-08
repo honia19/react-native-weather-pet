@@ -70,11 +70,10 @@ const MainWrapper = styled.View`
 `;
 
 const TouchableHighlightContainer = styled.TouchableHighlight`
-  background-color: rgba(226, 222, 216, 0.6);
+  background-color: ${(props) => props.theme.backgroundColorLightnessTouch};
 `;
 
 const DateContainer = styled.View`
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 `;
@@ -83,7 +82,7 @@ const TextStyle = styled.Text`
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-regular';
 `;
 
@@ -98,7 +97,6 @@ const ImageIcon = styled.Image`
 `;
 
 const Temperature = styled.View`
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 `;
@@ -106,7 +104,7 @@ const Temperature = styled.View`
 DateContainer.numberDateText = styled(TextStyle)``;
 
 DateContainer.dayDateText = styled(TextStyle)`
-  color: ${(props) => (props.isWeekendDay ? 'red' : 'black')};
+  color: ${(props) => (props.isWeekendDay ? props.theme.textColorRed : props.theme.textColorBlack)};
 `;
 
 Temperature.prefixText = styled(TextStyle)``;

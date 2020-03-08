@@ -73,7 +73,6 @@ const WrapperView = styled.View`
 `;
 
 WrapperView.GeoLocationBlock = styled.View`
-  flex-direction: column;
   width: 200px;
   height: 100px;
   justify-content: flex-start;
@@ -84,27 +83,26 @@ WrapperView.GeoLocationBlock.continueText = styled.Text`
   font-size: 24px;
   line-height: 28px;
   text-align: center;
-  color: black;
+  color: ${(props) => props.theme.textColorBlack};
   font-family: 'simonetta-bold';
 `;
 
 WrapperView.GeoLocationBlock.continueButtonText = styled.Text`
   font-size: 24px;
   text-align: center;
-  color: white;
+  color: ${(props) => props.theme.textColorWhite};
   font-family: 'simonetta-bold';
 `;
 
 WrapperView.GeoLocationBlock.continueButton = styled.TouchableHighlight`
   width: 158px;
   height: 39px;
-  background-color: rgba(220, 153, 23, 0.49);
+  background-color: ${(props) => props.theme.backgroundColorDarkness};
   margin-right: 20px;
   margin-top: 10px;
 `;
 
 WrapperView.WeatherTextBlock = styled.View`
-  flex-direction: column;
   width: 100%;
   height: 100px;
   justify-content: flex-start;
@@ -113,14 +111,14 @@ WrapperView.WeatherTextBlock = styled.View`
 
 WrapperView.WeatherTextBlock.text = styled.Text`
   font-size: 36px;
-  color: white;
+  color: ${(props) => props.theme.textColorWhite};
   margin-right: 47px;
   font-family: 'simonetta-bold';
 `;
 
 WrapperView.WeatherTextBlock.countryText = styled.Text`
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.57);
+  color: ${(props) => props.theme.textColorCountryText};
   margin-right: 30px;
   font-family: 'simonetta-bold';
 `;
@@ -131,7 +129,7 @@ const WrapperBackgroundImage = styled.ImageBackground`
 `;
 
 const ErrorText = styled.Text`
-  color: red;
+  color: ${(props) => props.theme.textColorRed};
 `;
 
 export default MainComponent;

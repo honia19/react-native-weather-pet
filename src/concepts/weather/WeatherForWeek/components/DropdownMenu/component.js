@@ -2,17 +2,18 @@
 // @flow
 import React from 'react';
 import {
-  Menu,
-  MenuOptions,
-  MenuOption,
-  MenuTrigger
+  Menu, MenuOptions, MenuOption, MenuTrigger
 } from 'react-native-popup-menu';
 import styled from 'styled-components/native';
 import { BackHandler, Alert } from 'react-native';
 
-export const DropdownMenu = ({ handleChangeModalVisible }: Function) => {
+type DropdownMenuProps = {
+  handleChangeModalVisible: Function
+};
+
+export const DropdownMenu = ({ handleChangeModalVisible }: DropdownMenuProps) => {
   const handleShowAlert = (): void => Alert.alert(
-    'Exit from WeatherApp',
+    'Exit from Native Weather',
     'Are you sure, that you want to exit from the app?',
     [
       { text: 'Cancel', style: 'cancel' },

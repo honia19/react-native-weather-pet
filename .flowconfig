@@ -6,13 +6,8 @@
 ; Flow doesn't support platforms
 .*/Libraries/Utilities/LoadingView.js
 
-[include]
-
 [declarations]
 .*/node_modules/.*
-
-[libs]
-flow/
 
 [options]
 esproposal.decorators=ignore

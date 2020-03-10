@@ -11,7 +11,7 @@ import 'react-native-gesture-handler';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import CarbonDataScreen from '../screens/AirPollution/CarbonDataScreen';
-import NitrogenDioxideDataScreen from '../screens/AirPollution/NitrogenDioxideDataScreen';
+import ParticleDataScreen from '../screens/AirPollution/ParticleDataScreen';
 import OzoneDataScreen from '../screens/AirPollution/OzoneDataScreen';
 import SulfurDioxideDataScreen from '../screens/AirPollution/SulfurDioxideDataScreen';
 import MainScreen from '../screens/MainScreen';
@@ -29,19 +29,19 @@ const config = {
 };
 
 const AirPollutionTabNavigator = createMaterialTopTabNavigator({
-  Carbon: {
-    screen: CarbonDataScreen,
+  Particle: {
+    screen: ParticleDataScreen,
     navigationOptions: {
-      tabBarLabel: 'CO',
+      tabBarLabel: 'Particle',
       tabBarIcon: ({ tintColor }) => (
         <Ionicons name="ios-settings" color={tintColor} size={24} />
       )
     }
   },
-  Nitrogen: {
-    screen: NitrogenDioxideDataScreen,
+  Carbon: {
+    screen: CarbonDataScreen,
     navigationOptions: {
-      tabBarLabel: 'NO2',
+      tabBarLabel: 'CO',
       tabBarIcon: ({ tintColor }) => (
         <Ionicons name="ios-settings" color={tintColor} size={24} />
       )
@@ -67,7 +67,7 @@ const AirPollutionTabNavigator = createMaterialTopTabNavigator({
   }
 },
 {
-  initialRouteName: 'Carbon',
+  initialRouteName: 'Particle',
   tabBarPosition: 'bottom',
   swipeEnabled: true,
   animationEnabled: true,

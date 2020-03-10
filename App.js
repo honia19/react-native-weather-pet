@@ -12,7 +12,7 @@ import { theme } from './src/theme';
 import { AppNavigation } from './src/navigation/AppNavigation';
 import locationStore from './src/concepts/MainComponent/store/locationStore';
 import cityModalStore from './src/concepts/CityChangeModal/store/cityModalStore';
-import pollutionAirStore from './src/concepts/airPollution/store/pollutionStore';
+import pollutionAirStore from './src/concepts/AirPollution/store/pollutionStore';
 import weatherWeakStore from './src/concepts/weather/store/weatherWeekStore';
 
 const stores = {

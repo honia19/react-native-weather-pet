@@ -1,1 +1,1 @@
-export { default } from '../../concepts/airPollution/OzonePollutionView';
+export { default } from '../../concepts/AirPollution';

@@ -15,10 +15,10 @@ class CityModal {
 
   @observable modalControl = observable.object({
     modal: false,
-    carbonPollutonData: false,
-    nitrogenPollutonData: false,
-    ozonePollutonData: false,
-    sulfurPollutonData: false
+    carbon: false,
+    nitrogen: false,
+    ozone: false,
+    sulfur: false
   });
 
   @action.bound setNewCity(title: string): void {

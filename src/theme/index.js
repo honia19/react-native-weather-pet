@@ -11,5 +11,12 @@ export const theme = {
   backgroungColorInIndicator: '#222422',
   backgroundColorButtonOk: '#7d6c18',
   backgroundColorBlack: '#000000',
-  backgroundColorWhite: '#ffffff'
+  backgroundColorWhite: '#ffffff',
+
+  fillGreen: '#00ff00',
+  fillYellow: '#ffff00',
+  fillOrange: '#ffa500',
+  fillPurpule: '#800080',
+  fillRed: '#ff0000',
+  fillMaroon: '#800000'
 };

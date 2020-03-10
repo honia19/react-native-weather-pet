@@ -1,1 +1,1 @@
-export { default } from '../../concepts/airPollution/SulfurPollutionView';
+export { default } from '../../concepts/AirPollution';

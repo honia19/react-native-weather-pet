@@ -25,6 +25,7 @@ const AirPollution = inject('locationStore', 'pollutionAirStore')(observer(({ na
   useEffect(() => {
     getAitPollutionData();
   }, [locationStore.city]);
+
   return (
     <PollutionContentView pollution={navigation.state.key.toLowerCase()} />
   );

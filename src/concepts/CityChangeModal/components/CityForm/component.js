@@ -5,7 +5,11 @@ import { string, object } from 'yup';
 import styled from 'styled-components/native';
 import { Keyboard } from 'react-native';
 
-const CityForm = ({ handleSetNewCity }: Function) => {
+type CityFormProps = {
+  handleSetNewCity: Function
+};
+
+const CityForm = ({ handleSetNewCity }: CityFormProps) => {
   const {
     handleSubmit,
     handleChange,
